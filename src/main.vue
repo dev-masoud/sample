@@ -34,7 +34,7 @@
           <div class="row-title"><p>Deploy Server</p></div>
         </v-row>
         <v-row>
-            <v-col v-for="i in servers" :key="i" cols="3">
+            <v-col v-for="i in servers" :key="i"  sm="12" md="6" lg="3">
                 <v-card class="server-card" height="300px"   max-width="344" :class="{ selected: server === i.id }"  @click="setserver(i.id)">
                    <div :class="{ lilcheck: server1 === i.id }" >
                 <div id="tickmark" :class="{ tickmark: server2 === i.id }" ></div>
@@ -50,7 +50,7 @@
         >
 
         <v-row>
-                    <v-col v-for="i in location" :key="i" cols="3">
+                    <v-col v-for="i in location" :key="i"  sm="12" md="6" lg="3">
               <v-card class="server-card"      max-width="344"  :class="{ selected: contr === i.id }"  @click="setcontr(i.id)">
                               <div :class="{ lilcheck: contr1 === i.id }" >
                 <div id="tickmark" :class="{ tickmark: contr2 === i.id }" ></div>
@@ -90,7 +90,7 @@
                 
 
         <v-row>
-          <v-col v-for="i in size" :key="i" cols="3">
+          <v-col v-for="i in size" :key="i"  sm="12" md="6" lg="3">
             <v-card
               class="server-card"
               height="300px"
@@ -156,6 +156,7 @@ export default {
       isActive: false,
 
 
+
         menu:[
           {id:1, text:"product", url:("https://img.icons8.com/nolan/96/box.png")},
           {id:2, text:"Billing", url:("https://img.icons8.com/nolan/96/briefcase.png")},
@@ -214,14 +215,18 @@ export default {
 
 
 
-
   
     };
   },
+      computed: {
+
+    },
   components: {
 
   },
   methods: {
+
+
 
          setserver(id){
       this.server=id;

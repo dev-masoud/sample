@@ -35,7 +35,7 @@
         </v-row>
         <v-row>
             <v-col v-for="i in servers" :key="i"  sm="12" md="6" lg="3">
-                <v-card class="server-card" height="300px"   max-width="344" :class="{ selected: server === i.id }"  @click="setserver(i.id)">
+                <v-card class="server-card" height="300px"   max-width="344" min-width="300" :class="{ selected: server === i.id }"  @click="setserver(i.id)">
                    <div :class="{ lilcheck: server1 === i.id }" >
                 <div id="tickmark" :class="{ tickmark: server2 === i.id }" ></div>
               </div>
@@ -95,6 +95,7 @@
               class="server-card"
               height="300px"
               max-width="344"
+              min-width="300"
               :class="{ selected: current === i.id }"
               @click="setCurrent(i.id)"
             >
